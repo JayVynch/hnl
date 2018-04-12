@@ -7,12 +7,11 @@
   </head>
   <body>
     <div class="white">
-
-        <?php
+      <?php
         $timestamp = time();
-         $date = strtotime(date("Y"));
-         $readabledate = strftime("%dth - %B - %Y",$date);
-         $readabletime = strftime("%I:%M %p", $date);?>
+         $readabledate = date('jS F Y',$timestamp);
+         $readabletime = date("h: i: s a", $timestamp); 
+      ?>
 
          <h2 class="time"><?php echo $readabletime; ?></h2>
          <h1 class="date"><?php echo $readabledate; ?></h1>
